@@ -4,6 +4,8 @@ Module Program
     Sub Main(args As String())
         Dim cislo As Integer
         Dim pocetopakovani As Integer
+        Dim soucetsuda As Integer = 0
+        Dim soucetlicha As Integer = 0
 
         Console.WriteLine("Zadej, kolik bude možné zadat èísel.")
         If Integer.TryParse(Console.ReadLine, pocetopakovani) Then
@@ -29,14 +31,18 @@ Module Program
                     Else Console.WriteLine("Zadávej pouze celá èísla.")
                             Exit Do
                     End If
-
+                    If cislo Mod 2 = 0 Then
+                        soucetlicha = soucetlicha + cislo
+                    Else
+                        soucetsuda = soucetsuda + cislo
+                    End If
 
                 Loop
             Else Console.WriteLine("Zadávej pouze kladná èísla.")
             End If
         Else Console.WriteLine("Zadávej pouze celá èísla.")
         End If
-
+        Console.WriteLine($"Souèet všech sudých èísel je {soucetsuda} a soušet všech lichých je {soucetlicha}")
 
 
     End Sub
