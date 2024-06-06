@@ -6,6 +6,7 @@ Module Program
         Dim pocetopakovani As Integer
         Dim soucetsuda As Integer
         Dim soucetlicha As Integer
+        Dim pocetsudych, pocetlichych As Integer
 
         Console.WriteLine("Zadej, kolik bude možné zadat èísel.")
         If Integer.TryParse(Console.ReadLine, pocetopakovani) Then
@@ -24,12 +25,15 @@ Module Program
                         If cislo > 0 Then
                             If cislo Mod 2 = 0 Then
                                 soucetsuda = soucetsuda + cislo
+                                pocetsudych = pocetsudych + 1
                             Else
                                 soucetlicha = soucetlicha + cislo
+                                pocetlichych = pocetlichych + 1
                             End If
                             If pocetopakovani = 0 Then
 
                                 Console.WriteLine($"Souèet všech sudých èísel je {soucetsuda} a souèet všech lichých je {soucetlicha}")
+                                Console.WriteLine($"Poèet zadaných sudých èísel je {pocetsudych} a poèet lichých je {pocetlichych}")
                                 Exit Do
 
                             End If
