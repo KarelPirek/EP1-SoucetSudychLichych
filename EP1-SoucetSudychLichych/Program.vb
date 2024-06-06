@@ -7,6 +7,8 @@ Module Program
         Dim soucetsuda As Integer
         Dim soucetlicha As Integer
         Dim pocetsudych, pocetlichych As Integer
+        Console.WriteLine("Poèítadlo souètù sudých a lichých èísel")
+        Console.WriteLine("---------------------------------------")
         Do
             Console.WriteLine("Zadej, kolik bude možné zadat èísel.")
             If Integer.TryParse(Console.ReadLine, pocetopakovani) Then
@@ -51,7 +53,8 @@ Module Program
                 End If
             Else Console.WriteLine("Zadávej pouze celá èísla.")
             End If
-            Console.ReadKey()
+            Console.WriteLine("--------------------------------------------------------------")
+
         Loop
 
     End Sub
